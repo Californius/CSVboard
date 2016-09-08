@@ -1,0 +1,47 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 06.11.2015, 10:59:17
+    Author     : yyu
+*/
+
+/* Selected row */
+.table-view:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color: #FFFF99;
+    -fx-background-insets: 0, 1, 2;
+    -fx-background: -fx-accent;
+    -fx-text-fill: -fx-selection-bar-text;
+}
+
+/* Selected row when table not focused */
+.table-row-cell:filled:focused:selected {
+    -fx-background-color: #FFFF99;
+    -fx-background-insets: 0, 1, 2;
+    -fx-background: -fx-accent;
+    -fx-text-fill: -fx-selection-bar-text;
+}
+
+/* Row hovered */
+.table-view:row-selection .table-row-cell:filled:hover {
+    -fx-background-color: #FFFF99;
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-text-fill: -fx-text-inner-color;
+}
+
+/* Selected row hovered */
+.table-view:focused .table-row-cell:filled:focused:selected:hover {
+    -fx-background: -fx-accent;
+    -fx-background-color: yellow;
+    -fx-background-insets: 0, 1, 2;
+    -fx-text-fill: -fx-selection-bar-text;
+}
+
+/* Selected row hovered when table not focused */
+.table-view:row-selection .table-row-cell:filled:focused:hover {
+    -fx-background-color: #FFFF99;
+    -fx-background-insets: 0, 0 0 1 0, 1 1 2 1, 2 2 3 2, 3 3 4 3;
+    -fx-text-fill: -fx-text-inner-color;
+}

@@ -1,0 +1,46 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 06.11.2015, 10:59:17
+    Author     : yyu
+*/
+
+
+/*.table-row-cell:empty {
+    -fx-background-color: khaki;
+    -fx-border-color: grey
+}*/
+ 
+.table-view {
+    -fx-font-size: 10pt;
+    -fx-font-family: "Courier New";
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #CCFFFF;
+    -fx-font-weight: bold;
+}
+ 
+.table-row-cell:selected {
+    -fx-background-color: #CCFFFF;
+    -fx-font-weight: bold;
+}
+
+.table-row-cell:selected .text {
+       -fx-fill: blue;
+}
+
+.table-view .column-header{
+    -fx-text-fill: -fx-selection-bar-text;
+    -fx-font-size: 12;
+    -fx-font-family: "Courier New";
+}
+
+.text-field {
+    -fx-font-size: 10pt;
+    -fx-font-family: "Courier New";
+}
+

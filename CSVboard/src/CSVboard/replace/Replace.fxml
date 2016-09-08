@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="200.0" prefWidth="265.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CSVboard.replace.ReplaceController">
+   <children>
+      <Label layoutX="13.0" layoutY="50.0" text="Find what?" />
+      <Label layoutX="13.0" layoutY="84.0" text="Replace with?" />
+      <TextField fx:id="findTextField" layoutX="100.0" layoutY="46.0" />
+      <TextField fx:id="replaceTextField" layoutX="100.0" layoutY="80.0" onAction="#actionReplaceDialog" />
+      <CheckBox fx:id="caseCheckBox" layoutX="100.0" layoutY="118.0" mnemonicParsing="false" selected="true" text="Case Sensitive" />
+      <ComboBox fx:id="comboBox" layoutX="99.0" layoutY="13.0" onAction="#getColID" prefWidth="150.0" />
+      <Label layoutX="13.0" layoutY="17.0" text="Column" />
+      <Button fx:id="ok" layoutX="99.0" layoutY="151.0" mnemonicParsing="false" onAction="#actionReplaceDialog" text="Ok" />
+      <Button fx:id="cancel" layoutX="148.0" layoutY="151.0" mnemonicParsing="false" onAction="#closeWindow" text="Cancel" />
+   </children>
+</AnchorPane>

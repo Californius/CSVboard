@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="435.0" prefWidth="435.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CSVboard.InfoController">
+   <children>
+      <Label layoutX="39.0" layoutY="89.0" text="Author : Yusuf Yurdagel">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="39.0" layoutY="109.0" text="Homepage : www.yups-blog.de">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="89.0" layoutY="23.0" text="CSVboard 1.0">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="textArea" layoutX="39.0" layoutY="136.0" prefHeight="251.0" prefWidth="357.0" />
+      <Button layoutX="183.0" layoutY="396.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="8.0" prefWidth="69.0" text="Ok" />
+     <ImageView fitWidth="48" layoutX="33.0" layoutY="26.0" preserveRatio="true" smooth="true">
+       <image>
+         <Image url="CSVboard/board.png" />
+       </image>
+     </ImageView>
+   </children>
+</AnchorPane>

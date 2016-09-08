@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.input.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CSVboard.FXMLDocumentController">
+   <children>
+      <BorderPane fx:id="pane" layoutX="60.0" prefHeight="200.0" prefWidth="320.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <TableView fx:id="table" editable="true" onKeyReleased="#textfieldTableSize" onMousePressed="#textfieldTableSize" BorderPane.alignment="CENTER" />
+         </center>
+         <top>
+            <MenuBar prefHeight="25.0" prefWidth="529.0" style="-fx-opacity: white;" BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                        <MenuItem mnemonicParsing="false" onAction="#openFile" text="Open..." />
+                        <MenuItem fx:id="save" disable="true" mnemonicParsing="false" onAction="#saveFile" text="Save" />
+                        <MenuItem fx:id="saveAs" disable="true" mnemonicParsing="false" onAction="#saveFileAs" text="Save as..." />
+                      <MenuItem fx:id="exportXML" disable="true" mnemonicParsing="false" onAction="#convertFileXML" text="Export to XML" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                        <MenuItem fx:id="selectAll" disable="true" mnemonicParsing="false" onAction="#actionSelectAll" text="Select all">
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="A" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </MenuItem>
+                        <MenuItem fx:id="replace" disable="true" mnemonicParsing="false" onAction="#actionEditDialog" text="Replace" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                        <MenuItem fx:id="tutorial" mnemonicParsing="false" onAction="#actionTutorialDialog" text="Quick Tutorial" />
+                    <MenuItem mnemonicParsing="false" onAction="#actionInfoDialog" text="About CSVboard" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+         <bottom>
+            <SplitPane dividerPositions="0.7586206896551724" prefHeight="28.0" prefWidth="640.0" BorderPane.alignment="CENTER">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <TextField fx:id="textField" layoutX="19.0" layoutY="67.0" onAction="#searchField" prefHeight="158.0" prefWidth="187.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <TextField fx:id="textFieldRows" alignment="CENTER_RIGHT" layoutX="148.0" layoutY="67.0" onAction="#textfieldTableSize" prefHeight="158.0" prefWidth="445.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>
